@@ -10,9 +10,12 @@ ref = sys.argv[2]
 print(f"{tar} -> {ref}")
 
 #creat output file name
-head, tail = os.path.split(tar)
-orig, ext = os.path.splitext(tail)
-output = f"{orig}_matcher.wav"
+head1, tail1 = os.path.split(tar)
+head2, tail2 = os.path.split(ref)
+orig1, ext1 = os.path.splitext(tail1)
+orig2, ext2 = os.path.splitext(tail2)
+
+output = f"{orig1}_to_{orig2}.wav"
 
 # Sending all log messages to the default print function
 mg.log(print)
