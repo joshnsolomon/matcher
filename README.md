@@ -1,6 +1,6 @@
 # matcher 
 
-Uses matchering program to master audio with a reference
+Python script to master audio with a reference
 
 ```bash
 ./matcher song.mp3 reference.wav
