@@ -1,0 +1,21 @@
+#!/usr/local/bin/python3
+
+import sys
+import os
+import matchering as mg
+
+#read args
+tar = sys.argv[1]
+ref = sys.argv[2]
+print(f"{tar} -> {ref}")
+
+#creat output file name
+orig, ext = os.path.splitext(tar)
+output = f"{orig}_matcher.wav"
+
+# Sending all log messages to the default print function
+mg.log(print)
+
+mg.process(target=tar, reference=ref, results=[mg.pcm16(output)])
+
+print(output)
