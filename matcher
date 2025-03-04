@@ -10,7 +10,8 @@ ref = sys.argv[2]
 print(f"{tar} -> {ref}")
 
 #creat output file name
-orig, ext = os.path.splitext(tar)
+head, tail = os.path.split(tar)
+orig, ext = os.path.splitext(tail)
 output = f"{orig}_matcher.wav"
 
 # Sending all log messages to the default print function
